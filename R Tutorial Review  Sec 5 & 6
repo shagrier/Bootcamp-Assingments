@@ -1,0 +1,44 @@
+> ??sin
+> Light <- c(20,20,20,20,21,24,44,60,90,94,101)
+> rmax <- c(1.73,1.65,2.02,1.89,2.61,1.36,2.37,2.08,2.69,2.32,3.67)
+> Light <- (20,20,20,20,21,24,44,60,90,94,101)
+Error: unexpected ',' in "Light <- (20,"
+> hist(rma)
+Error in hist(rma) : object 'rma' not found
+> hist(rmax)
+> plot(rmax~Light)
+> plot(Light, rmax)
+> fit <- lm(rmax~Light)
+> summary(fit)
+
+Call:
+lm(formula = rmax ~ Light)
+
+Residuals:
+    Min      1Q  Median      3Q 
+-0.5478 -0.2607 -0.1166  0.1783 
+    Max 
+ 0.7431 
+
+Coefficients:
+            Estimate Std. Error
+(Intercept) 1.580952   0.244519
+Light       0.013618   0.004317
+            t value Pr(>|t|)    
+(Intercept)   6.466 0.000116 ***
+Light         3.154 0.011654 *  
+---
+Signif. codes:  
+  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05
+  ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.4583 on 9 degrees of freedom
+Multiple R-squared:  0.5251,	Adjusted R-squared:  0.4723 
+F-statistic: 9.951 on 1 and 9 DF,  p-value: 0.01165
+
+> albline(fit)
+Error: could not find function "albline"
+> abline(fit)
+> coef(fit)
+(Intercept)       Light 
+ 1.58095214  0.01361776 
